@@ -8,7 +8,7 @@ public class DataMoshEffect : MonoBehaviour
 {
     [SerializeField] private Material DataMoshMat;
 
-    private void Start()
+    private void Awake()
     {
         // set depth textures to generate motion vectors
         this.GetComponent<Camera>().depthTextureMode = DepthTextureMode.MotionVectors;

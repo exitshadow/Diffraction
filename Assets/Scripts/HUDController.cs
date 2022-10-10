@@ -40,6 +40,7 @@ public class HUDController : MonoBehaviour
         Ray r = new Ray(pos2Ground.position,
                         pos2Ground.transform.forward);
         horizonFrontPos = r.GetPoint(horizonDist);
+        Debug.Log(horizonFrontPos);
 
         // transfer projected point coordinates onto screen coordinates
         Vector3 w2s = playerCamera.WorldToScreenPoint(horizonFrontPos);

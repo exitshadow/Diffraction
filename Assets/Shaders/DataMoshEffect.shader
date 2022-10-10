@@ -6,8 +6,6 @@ Shader "CustomEffects/DataMoshEffect"
     }
     SubShader
     {
-        // No culling or depth
-        Cull Off ZWrite Off ZTest Always
 
         GrabPass
         {
@@ -25,20 +23,20 @@ Shader "CustomEffects/DataMoshEffect"
             struct appdata
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
-                float4 uv : TEXCOORD0;
-                float4 vertex : SV_POSITION;
+                float4 vertex : POSITION;
+                float4 uvgrab : TEXCOORD0;
             };
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = ComputeGrabScreenPos(o.vertex);
+                o.uvgrab = ComputeGrabScreenPos(o.vertex);
+                o.uvgrab.y = 1 - o.uvgrab.y;
                 return o;
             }
 
@@ -47,22 +45,25 @@ Shader "CustomEffects/DataMoshEffect"
             sampler2D _PR;
             int _Button;
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag (v2f i) : SV_TARGET
             {
-                float4 mot = tex2D(_CameraMotionVectorsTexture, i.uv);
+                float4 mot;
+                
                 //fixed4 col = tex2D(_MainTex, i.uv + mot.rg);
-
                 //col += mot;
                 
                 #if UNITY_UV_STARTS_AT_TOP
-                    float2 movUV = float2(  i.uv.x - mot.r,
-                                            i.uv.y + mot.g);
+                    //i.uvgrab.y = 1 - i.uvgrab.y;
+                    mot = tex2D(_CameraMotionVectorsTexture, i.uvgrab);
+                    float2 movUV = float2(  i.uvgrab.x - mot.r,
+                                            i.uvgrab.y + mot.g);
                 #else
-                    float2 movUV = float2(  i.uv.x - mot.r,
-                                            1 - i.uv.y - mot.g);
+                    mot = tex2D(_CameraMotionVectorsTexture, i.uvgrab);
+                    float2 movUV = float2(  i.uvgrab.x - mot.r,
+                                            i.uvgrab.y - mot.g);
                 #endif
                 
-                fixed4 current = tex2D(_MainTex, i.uv);
+                fixed4 current = tex2D(_MainTex, i.uvgrab);
                 fixed4 prev = tex2D(_PR, movUV);
 
                 fixed4 col = lerp(current, prev, _Button);
