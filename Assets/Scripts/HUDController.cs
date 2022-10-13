@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
-    private const float K = 3.6f;
+    private const float K = 3600f;
 
     [SerializeField] private RectTransform tiltIndicator;
     [SerializeField] private RectTransform horizonIndicator;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private int horizonIndicatorBounds;
+
+    private Ray ray = new Ray();
+    private Transform pos2Ground;
+
+    private void Start()
+    {
+        pos2Ground = new GameObject().transform;
+    }
     
     private void Update()
     {
@@ -22,7 +30,6 @@ public class HUDController : MonoBehaviour
 
     private int HorizonToScreenHeight()
     {
-        Transform pos2Ground = new GameObject().transform;
         Vector3 horizonFrontPos;
         float horizonDist;
         int horizonDiff;
@@ -37,10 +44,11 @@ public class HUDController : MonoBehaviour
                                  playerCamera.transform.position.z);
 
         // project horizon distance from the grounded position
-        Ray r = new Ray(pos2Ground.position,
-                        pos2Ground.transform.forward);
-        horizonFrontPos = r.GetPoint(horizonDist);
-        Debug.Log(horizonFrontPos);
+        ray.origin = pos2Ground.position;
+        ray.direction = pos2Ground.transform.forward;
+        // Debug.DrawRay(pos2Ground.position, pos2Ground.transform.forward, Color.red);
+        horizonFrontPos = ray.GetPoint(horizonDist);
+
 
         // transfer projected point coordinates onto screen coordinates
         Vector3 w2s = playerCamera.WorldToScreenPoint(horizonFrontPos);

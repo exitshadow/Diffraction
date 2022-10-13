@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class DataMoshEffect : MonoBehaviour
 {
+    [SerializeField] private Material VHSMat;
     [SerializeField] private Material DataMoshMat;
 
     private void Awake()
@@ -16,11 +17,12 @@ public class DataMoshEffect : MonoBehaviour
 
     private void Update()
     {
-        Shader.SetGlobalInt("_Button", Input.GetButton("Fire1") ? 1 : 0);
+        // Shader.SetGlobalInt("_Button", Input.GetButton("Fire1") ? 1 : 0);
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        Graphics.Blit(src, dest, DataMoshMat);
+        Graphics.Blit(src, dest, VHSMat);
+        //Graphics.Blit(src, dest, DataMoshMat);
     }
 }

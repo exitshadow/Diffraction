@@ -6,6 +6,7 @@ Shader "CustomEffects/DataMoshEffect"
     }
     SubShader
     {
+        Tags { "Queue" = "Transparent" }
 
         GrabPass
         {
@@ -23,12 +24,14 @@ Shader "CustomEffects/DataMoshEffect"
             struct appdata
             {
                 float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 vertex : POSITION;
-                float4 uvgrab : TEXCOORD0;
+                float2 uv : TEXCOORD0;
+                float4 uvgrab : TEXCOORD1;
             };
 
             v2f vert (appdata v)
@@ -37,6 +40,7 @@ Shader "CustomEffects/DataMoshEffect"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uvgrab = ComputeGrabScreenPos(o.vertex);
                 o.uvgrab.y = 1 - o.uvgrab.y;
+                o.uv = v.uv;
                 return o;
             }
 
@@ -66,7 +70,7 @@ Shader "CustomEffects/DataMoshEffect"
                 fixed4 current = tex2D(_MainTex, i.uvgrab);
                 fixed4 prev = tex2D(_PR, movUV);
 
-                fixed4 col = lerp(current, prev, _Button);
+                fixed4 col = lerp(current, prev, 1);
 
                 return col;
             }
