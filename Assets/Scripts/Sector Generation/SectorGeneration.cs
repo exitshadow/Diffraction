@@ -12,12 +12,14 @@ public class SectorGeneration : MonoBehaviour
     [SerializeField] private List<Evidence> _evidenceList = new List<Evidence>();
     [SerializeField] private Sector _currentSector;
 
+    private float _remainingTime;
+
     private void Awake()
     {
         for (int i = 0; i < _evidenceList.Count; i++)
         {
             _evidenceList[i].SectorOfOrigin = _currentSector;
-            
+
             GameObject evidenceObject = new GameObject();
             evidenceObject.name = "New Evidence Object";
             evidenceObject.AddComponent<MeshRenderer>();
@@ -35,5 +37,12 @@ public class SectorGeneration : MonoBehaviour
             evidenceObject.transform.position = new Vector3(2 * i,0, 2 *i);
         }
 
-    }   
+        _remainingTime = Random.Range(10 * 60, 20 * 60);
+    }
+
+    private void Update()
+    {
+        if (_remainingTime > 0) _remainingTime -= Time.fixedDeltaTime;
+        else print("time is over");
+    }
 }
