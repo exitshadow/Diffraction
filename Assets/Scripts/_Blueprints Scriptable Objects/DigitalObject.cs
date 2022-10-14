@@ -5,7 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Diffraction Assets/Evidence/Digital Object")]
 public sealed class DigitalObject : Evidence
 {
-    [SerializeField] private GameObject _meshStructure;
+    [SerializeField] private Mesh _meshStructure;
+    [SerializeField] private Material _objectMat;
 
-    public GameObject MeshStructure { get { return _meshStructure; } set { _meshStructure = value; } }
+    public Mesh MeshStructure { get { return _meshStructure; } }
+    public Material ObjectMat { get { return _objectMat; } }
 }

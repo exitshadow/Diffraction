@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a8a3a4e3639a60459e8b7d9a98a954f, type: 3}
-  m_Name: TL_01
+  m_Name: TL_X02 (Rain)
   m_EditorClassIdentifier: 
-  _dataName: 0xff58ed
-  _corruptionLevel: 0
-  _sectorOfOrigin: {fileID: 0}
-  _linkedEvidence: []
-  _logContent: "Yesterday, I walked the dog. It was heavy and difficult to go on\u2014I
-    hope things will get better soon however."
+  _dataName: 0x9e9e01
+  _corruptionLevel: 25
+  _sectorOfOrigin: {fileID: 11400000, guid: cd753fbee2c96ef42b207b1a19a7139f, type: 2}
+  _linkedEvidence:
+  - {fileID: 11400000, guid: f51cc692da5ab7c4389568b977dc18ff, type: 2}
+  _logContent: A lot of rain. That was refreshing. Could it be that a single hand
+    masters a whole continent?

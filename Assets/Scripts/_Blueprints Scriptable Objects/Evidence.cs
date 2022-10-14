@@ -7,6 +7,11 @@ public class Evidence : DataBlock
     [SerializeField] protected Sector _sectorOfOrigin;
     [SerializeField] protected List<Evidence> _linkedEvidence;
 
-    public Sector SectorOfOrigin { get { return _sectorOfOrigin; } }
+    public Sector SectorOfOrigin
+    {
+        get { return _sectorOfOrigin; }
+        set { _sectorOfOrigin = value; }
+    }
+    
     public List<Evidence> LinkedEvidence { get { return _linkedEvidence; } }
 }

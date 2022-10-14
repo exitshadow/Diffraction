@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7de874643e71ea40a1b939871ea03fb, type: 3}
-  m_Name: P_01
+  m_Name: P_X01 (LightMap)
   m_EditorClassIdentifier: 
   _dataName: 0xd0eff7
   _corruptionLevel: 0

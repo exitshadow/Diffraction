@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7de874643e71ea40a1b939871ea03fb, type: 3}
-  m_Name: P_02
+  m_Name: P_X02 (Cheesy Couple)
   m_EditorClassIdentifier: 
   _dataName: 0xaaa000
   _corruptionLevel: 60
-  _sectorOfOrigin: {fileID: 0}
+  _sectorOfOrigin: {fileID: 11400000, guid: cd753fbee2c96ef42b207b1a19a7139f, type: 2}
   _linkedEvidence:
   - {fileID: 11400000, guid: 7617e4835412737479706307a62698a5, type: 2}
   - {fileID: 11400000, guid: f51cc692da5ab7c4389568b977dc18ff, type: 2}
