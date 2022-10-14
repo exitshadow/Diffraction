@@ -7,31 +7,31 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(Renderer))]
 [RequireComponent(typeof(Collider))]
-public class EvidenceGO : MonoBehaviour
+public class EvidenceComponent : MonoBehaviour
 {
-    private MeshFilter _meshFilter;
-    private Renderer _renderer;
+    [SerializeField] private MeshFilter _meshFilter;
+    [SerializeField] private Renderer _renderer;
 
-    public Mesh TextLogMesh;
-    public Mesh PictureMesh;
-    public Material TextLogMat;
-    public Material PictureMat;
+    [SerializeField] private Mesh _textLogMesh;
+    [SerializeField] private Mesh _pictureMesh;
+    [SerializeField] private Material _textLogMat;
+    [SerializeField] private Material _pictureMat;
 
     [SerializeField] private Evidence _evidenceData;
-    public Evidence EvidenceData { get { return _evidenceData; } set {_evidenceData = value; } }
+    public Evidence EvidenceData { get { return _evidenceData; } }
 
-    // todo
-    //  refactor code so there is a big MeshSet or a similar function
-    //  so the SectorGeneration script doesn’t have to attribute
-    //  meshes and stuff with a very long list of instructions
-
-    // not sure i need this actually
-    public EvidenceGO(Evidence passedEvidence, Sector sectorOfOrigin)
+    public void Initialize( Evidence passedEvidence,
+                            Mesh textLogMesh,
+                            Mesh pictureMesh,
+                            Material textLogMat,
+                            Material pictureMat     )
     {
-        print("EvidenceGO constructor method is called");
         _evidenceData = passedEvidence;
-        _evidenceData.SectorOfOrigin = sectorOfOrigin;
-    }
+        _textLogMesh = textLogMesh;
+        _pictureMesh = pictureMesh;
+        _textLogMat = textLogMat;
+        _pictureMat = pictureMat;
+    } 
 
     private void Start()
     {
@@ -52,14 +52,14 @@ public class EvidenceGO : MonoBehaviour
         else if (dataCastPic != null)
         {
             print($"{_evidenceData.name} is of type Picture");
-            _meshFilter.sharedMesh = PictureMesh;
-            _renderer.sharedMaterial = PictureMat;
+            _meshFilter.sharedMesh = _pictureMesh;
+            _renderer.sharedMaterial = _pictureMat;
         }
         else if (dataCastTL != null)
         {
             print($"{_evidenceData.name} is of type TextLog");
-            _meshFilter.sharedMesh = TextLogMesh;
-            _renderer.sharedMaterial = TextLogMat;
+            _meshFilter.sharedMesh = _textLogMesh;
+            _renderer.sharedMaterial = _textLogMat;
 
         }
 
