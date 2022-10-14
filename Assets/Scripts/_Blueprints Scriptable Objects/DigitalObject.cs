@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Diffraction Assets/Evidence/Digital Object")]
 public sealed class DigitalObject : Evidence
 {
     [SerializeField] private GameObject _meshStructure;

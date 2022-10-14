@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8a3a4e3639a60459e8b7d9a98a954f, type: 3}
+  m_Name: TL_01
+  m_EditorClassIdentifier: 
+  _dataName: 0xff58ed
+  _corruptionLevel: 0
+  _sectorOfOrigin: {fileID: 0}
+  _linkedEvidence: []
+  _logContent: "Yesterday, I walked the dog. It was heavy and difficult to go on\u2014I
+    hope things will get better soon however."
