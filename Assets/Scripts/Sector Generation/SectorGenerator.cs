@@ -31,7 +31,13 @@ public class SectorGenerator : MonoBehaviour
                                             _textLogMat,
                                             _pictureMat     );
 
-            evidenceObject.transform.position = new Vector3(2 * i,0, 2 *i);
+            float x = Random.Range(-10, 10);
+            float z = Random.Range(-10, 10);
+            evidenceObject.transform.position = new Vector3(x, 0, z);
+
+            Vector3 rot = evidenceObject.transform.eulerAngles;
+            rot.y = Random.Range(0,360.0f);
+            evidenceObject.transform.eulerAngles = rot;
         }
 
         _remainingTime = Random.Range(10 * 60, 20 * 60);

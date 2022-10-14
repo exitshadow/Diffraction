@@ -62,7 +62,5 @@ public class EvidenceComponent : MonoBehaviour
             _renderer.sharedMaterial = _textLogMat;
 
         }
-
-
     }
 }
