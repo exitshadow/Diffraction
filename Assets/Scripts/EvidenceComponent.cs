@@ -38,16 +38,16 @@ public class EvidenceComponent : MonoBehaviour
         _meshFilter = GetComponent<MeshFilter>();
         _renderer = GetComponent<Renderer>();
 
-        // if evidence is a digital object, replace the mesh assigned in the prefab
-        DigitalObject dataCastDO = _evidenceData as DigitalObject;
+        // if evidence is a digital object, inject mesh from the so
+        DigitalObject dataCastDigitObj = _evidenceData as DigitalObject;
         Picture dataCastPic = _evidenceData as Picture;
         TextLog dataCastTL = _evidenceData as TextLog;
 
-        if (dataCastDO != null)
+        if (dataCastDigitObj != null)
         {
             print($"{_evidenceData.name} is of type DigitalObject");
-            _meshFilter.sharedMesh = dataCastDO.MeshStructure;
-            _renderer.sharedMaterial = dataCastDO.ObjectMat;
+            _meshFilter.sharedMesh = dataCastDigitObj.MeshStructure;
+            _renderer.sharedMaterial = dataCastDigitObj.ObjectMat;
         }
         else if (dataCastPic != null)
         {
