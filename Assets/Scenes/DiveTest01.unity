@@ -3205,7 +3205,6 @@ GameObject:
   - component: {fileID: 629774660}
   - component: {fileID: 629774659}
   - component: {fileID: 629774658}
-  - component: {fileID: 629774662}
   m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
@@ -3336,18 +3335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629774656}
   m_CullTransparentMesh: 1
---- !u!114 &629774662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629774656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec759101f5786b4b89aae8a1b47ca4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &743643232
 GameObject:
   m_ObjectHideFlags: 0
@@ -6647,6 +6634,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1914875263261190678, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
   m_PrefabInstance: {fileID: 1982330920}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402405818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1790573263, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
+  m_PrefabInstance: {fileID: 1982330920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402405812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1402405819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10012,6 +10010,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1168315082}
     m_Modifications:
     - target: {fileID: 1790573263, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790573263, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
       propertyPath: m_Navigation.m_WrapAround
       value: 0
       objectReference: {fileID: 0}
@@ -10019,6 +10021,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_ColorMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1790573263, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1402405818}
     - target: {fileID: 1790573263, guid: 4e758d15ccd18ee46ac5d9f03b2a00a6, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.a
       value: 0.21960784
