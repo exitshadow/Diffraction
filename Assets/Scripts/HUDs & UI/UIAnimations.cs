@@ -6,15 +6,23 @@ public class UIAnimations : MonoBehaviour
 {
     [SerializeField] private GameObject topContainer, bottomContainer, examinationBox;
     [SerializeField] private float time = 4f;
+    [SerializeField] private float delay = 2f;
 
-    public void UnfoldToRight(GameObject gameO)
+    public void UnfoldToRight(GameObject gameO, bool hasDelay)
     {
+        float width = gameO.GetComponent<RectTransform>().rect.width;
+        gameO.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
+
         gameO.SetActive(true);
-        LeanTween.value(gameO, 0, gameO.GetComponent<RectTransform>().rect.width, time)
+        
+        if (!hasDelay) delay = 0;
+
+        LeanTween.value(gameO, 0, width, time)
             .setEaseOutExpo()
             .setOnUpdate((value) => {
                 gameO.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, value);
-            });
+            })
+            .delay = time + delay;
     }
 
     private void Start()
@@ -23,7 +31,7 @@ public class UIAnimations : MonoBehaviour
         bottomContainer.SetActive(false);
         examinationBox.SetActive(false);
 
-        UnfoldToRight(topContainer);
-        UnfoldToRight(bottomContainer);
+        UnfoldToRight(topContainer, false);
+        UnfoldToRight(bottomContainer, true);
     }
 }
