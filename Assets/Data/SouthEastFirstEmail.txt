@@ -1,0 +1,34 @@
+Dear <PlayerName>,
+
+As you might already know since the rumours generally fly ahead, the forensics from the military police have discovered an unmanned body last month.
+
+Contrarily to the rumour, it wasn't active when found, but already in an extremely degraded shape. As per usual we have sent a forensic unit but it is the first time they have ever been faced to this type of challenge.
+
+As it seems, the body has been violently attacked and left in several pieces next to a ditch. The police unfortunately botched a large part of the recovery, but after a second search by our own teams we managed to retrieve about 90% of its remains, with the head being the more affected.
+
+Luckily, the memory blocks of this cyberbrain aren't located only in the head, but in several computing units scattered across the body, each one seemingly managing their own paths of memory, and functions. It is an extremely embedded architecture that also features a strange self-corrupting function, or virus. It is unclear whether this effect has been intended by its designers or if it is the result of an external attack.
+
+The self-corrupting function however poses a very challenging problem, since the more time we spend with the data open, the more scrambled it becomes; sometimes it looks as if it's been even rewritten, in a fashion that has some form of... fantasy. It would be difficult to describe in another way. Most of its memory however, seems to be traces of the life of quite a normal person; that person might have been the cover the unmanned unit used, but we aren't sure of this. You'll see, there are iterations that are quite depressing.
+
+Everything is strange with this case. It is unpleasant to accept the idea we hadn't see it coming at all. Since you are one of our most cutting edge researchers, the board has decided to forward this case to you—you have the maximal clearance on its scope.
+
+Our goals in this investigation are to:
+- identify the persons, unique or multiple, the body has impersonated;
+- identify the organizations, unique or multiple, that are behind its program;
+- identify the goals and targets of such organizations;
+- identify the people and entities that have been in contact with the unmanned body;
+- stabilize and preserve the data that has been recovered;
+- collect more data or addresses that would lead to further information;
+- any other information you might find relevant to the case.
+
+We wish to collect as much data and information possible so the intelligence team can in their turn assess the level of threat. By principle, consider this whole thing as maximally hazardous and a potential national threat.
+
+Hereby is your personal key to access the base interface.
+
+Any information that you would need for fulfilling your mission, please introduce a clearance request and I'd be happy to follow it up to suit your needs the best I can.
+
+Please let me know if you need any other information. Anyway, this case is on your hands now.
+
+With kind regards,
+
+SouthEast
