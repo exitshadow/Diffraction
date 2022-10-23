@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: TL_X01 (Dog)
   m_EditorClassIdentifier: 
   _dataName: 0xff58ed
+  _dataType: 3
   _corruptionLevel: 0
+  _status: 2
   _sectorOfOrigin: {fileID: 0}
   _linkedEvidence: []
   _logContent: "Yesterday, I walked the dog. It was heavy and difficult to go on\u2014I

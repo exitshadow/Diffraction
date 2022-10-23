@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6577e610fdd4a439375e3fa577486e, type: 3}
   m_Name: DO_X01 (Stanford Bunny)
   m_EditorClassIdentifier: 
-  _dataName: 
+  _dataName: 0xff47b
+  _dataType: 1
   _corruptionLevel: 0
+  _status: 2
   _sectorOfOrigin: {fileID: 11400000, guid: cd753fbee2c96ef42b207b1a19a7139f, type: 2}
   _linkedEvidence: []
   _meshStructure: {fileID: 6142361046089812224, guid: 2b6a852feb505a5449a45b901fa85aff, type: 3}

@@ -8,10 +8,14 @@ using System;
 public sealed class Sector : DataBlock
 {
     [SerializeField] private List<Evidence> _evidenceInSector;
+    [SerializeField] private float _remainingTime;
 
     public List<Evidence> EvidenceInSector
     {
         get { return _evidenceInSector; }
         set { _evidenceInSector = value; }
     }
+
+    public float RemainingTime { get { return _remainingTime; } }
+
 }

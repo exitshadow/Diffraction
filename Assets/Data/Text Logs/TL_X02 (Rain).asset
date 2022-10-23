@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: TL_X02 (Rain)
   m_EditorClassIdentifier: 
   _dataName: 0x9e9e01
+  _dataType: 3
   _corruptionLevel: 25
+  _status: 2
   _sectorOfOrigin: {fileID: 11400000, guid: cd753fbee2c96ef42b207b1a19a7139f, type: 2}
   _linkedEvidence:
   - {fileID: 11400000, guid: f51cc692da5ab7c4389568b977dc18ff, type: 2}

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: P_X01 (LightMap)
   m_EditorClassIdentifier: 
   _dataName: 0xd0eff7
+  _dataType: 2
   _corruptionLevel: 0
+  _status: 2
   _sectorOfOrigin: {fileID: 0}
   _linkedEvidence:
   - {fileID: 11400000, guid: 7617e4835412737479706307a62698a5, type: 2}

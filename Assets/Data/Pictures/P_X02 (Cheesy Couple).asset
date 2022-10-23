@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: P_X02 (Cheesy Couple)
   m_EditorClassIdentifier: 
   _dataName: 0xaaa000
+  _dataType: 2
   _corruptionLevel: 60
+  _status: 2
   _sectorOfOrigin: {fileID: 11400000, guid: cd753fbee2c96ef42b207b1a19a7139f, type: 2}
   _linkedEvidence:
   - {fileID: 11400000, guid: 7617e4835412737479706307a62698a5, type: 2}

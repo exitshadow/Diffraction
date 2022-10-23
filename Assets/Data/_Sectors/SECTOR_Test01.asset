@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7233b0861cc1574db32591b0ff4cd35, type: 3}
   m_Name: SECTOR_Test01
   m_EditorClassIdentifier: 
-  _dataName: 
-  _corruptionLevel: 0
+  _dataName: 0x0047bf
+  _dataType: 0
+  _corruptionLevel: 47
+  _status: 1
   _evidenceInSector: []
+  _remainingTime: 125
