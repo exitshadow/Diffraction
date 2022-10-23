@@ -8,19 +8,18 @@ public class UIAnimations : MonoBehaviour
     [SerializeField] private float time = 4f;
     [SerializeField] private float delay = 2f;
 
-    public void UnfoldToRight(GameObject gameO, bool hasDelay)
+    public void UnfoldToRight(GameObject animContainer, bool hasDelay)
     {
-        float width = gameO.GetComponent<RectTransform>().rect.width;
-        gameO.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
+        float width = animContainer.GetComponent<RectTransform>().rect.width;
+        animContainer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
 
-        gameO.SetActive(true);
+        animContainer.SetActive(true);
         
         if (!hasDelay) delay = 0;
 
-        LeanTween.value(gameO, 0, width, time)
-            .setEaseOutExpo()
+        LeanTween.value(animContainer, 0, width, time)
             .setOnUpdate((value) => {
-                gameO.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, value);
+                animContainer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, value);
             })
             .delay = time + delay;
     }
