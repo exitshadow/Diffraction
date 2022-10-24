@@ -1,0 +1,12 @@
+Font: LektonCode  Style: Bold
+Point Size: 247   SP/PD Ratio: 3,6٪
+
+Characters included: 193/193
+Missing characters: 0
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+
+Characters excluded from packing:
+----------------------------------------
