@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9985ed363001ce4192322aabf4a6ed3, type: 3}
+  m_Name: SouthEast First Email
+  m_EditorClassIdentifier: 
+  _expeditor: SouthEast
+  _title: New assignment for you [important]
+  _content: "Dear <PlayerName>,\r\n\r\nAs you might already know since the rumours
+    generally fly ahead, the forensics from the military police have discovered an
+    unmanned body last month.\r\n\r\nContrarily to the rumour, it wasn't active when
+    found, but already in an extremely degraded shape. As per usual we have sent
+    a forensic unit but it is the first time they have ever been faced to this type
+    of challenge.\r\n\r\nAs it seems, the body has been violently attacked and left
+    in several pieces next to a ditch. The police unfortunately botched a large part
+    of the recovery, but after a second search by our own teams we managed to retrieve
+    about 90% of its remains, with the head being the more affected.\r\n\r\nLuckily,
+    the memory blocks of this cyberbrain aren't located only in the head, but in
+    several computing units scattered across the body, each one seemingly managing
+    their own paths of memory, and functions. It is an extremely embedded architecture
+    that also features a strange self-corrupting function, or virus. It is unclear
+    whether this effect has been intended by its designers or if it is the result
+    of an external attack.\r\n\r\nThe self-corrupting function however poses a very
+    challenging problem, since the more time we spend with the data open, the more
+    scrambled it becomes; sometimes it looks as if it's been even rewritten, in a
+    fashion that has some form of... fantasy. It would be difficult to describe in
+    another way. Most of its memory however, seems to be traces of the life of quite
+    a normal person; that person might have been the cover the unmanned unit used,
+    but we aren't sure of this. You'll see, there are iterations that are quite depressing.\r\n\r\nEverything
+    is strange with this case. It is unpleasant to accept the idea we hadn't see
+    it coming at all. Since you are one of our most cutting edge researchers, the
+    board has decided to forward this case to you\u2014you have the maximal clearance
+    on its scope.\r\n\r\nOur goals in this investigation are to:\r\n- identify the
+    persons, unique or multiple, the body has impersonated;\r\n- identify the organizations,
+    unique or multiple, that are behind its program;\r\n- identify the goals and
+    targets of such organizations;\r\n- identify the people and entities that have
+    been in contact with the unmanned body;\r\n- stabilize and preserve the data
+    that has been recovered;\r\n- collect more data or addresses that would lead
+    to further information;\r\n- any other information you might find relevant to
+    the case.\r\n\r\nWe wish to collect as much data and information possible so
+    the intelligence team can in their turn assess the level of threat. By principle,
+    consider this whole thing as maximally hazardous and a potential national threat.\r\n\r\nHereby
+    is your personal key to access the base interface.\r\n\r\nAny information that
+    you would need for fulfilling your mission, please introduce a clearance request
+    and I'd be happy to follow it up to suit your needs the best I can.\r\n\r\nPlease
+    let me know if you need any other information. Anyway, this case is on your hands
+    now.\r\n\r\nWith kind regards,\r\n\r\nSouthEast"
+  hasBeenRead: 0
